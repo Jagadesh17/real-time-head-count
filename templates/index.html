@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Counting Application</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Counting Application</h1>
+        <div class="buttons">
+            <button onclick="window.location.href='/video_feed'">Use Real-Time Camera</button>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <label for="file-upload" class="custom-file-upload">
+                    Upload Image
+                </label>
+                <input id="file-upload" type="file" name="file" accept="image/*" required>
+                <button type="submit">Submit Image</button>
+            </form>
+        </div>
+        <div>
+            <img src="{{ url_for('video_feed') }}" alt="Real-Time Camera Feed">
+        </div>
+    </div>
+</body>
+</html>

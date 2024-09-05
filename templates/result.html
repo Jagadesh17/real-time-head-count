@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Image</title>
+    <link rel="stylesheet" href="E:\college\Projects\head count\student\static\style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Processed Image</h1>
+        <div>
+            <img src="{{ url_for('static', filename=image_path.split('/')[-1]) }}" alt="Processed Image">
+        </div>
+        <div>
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
